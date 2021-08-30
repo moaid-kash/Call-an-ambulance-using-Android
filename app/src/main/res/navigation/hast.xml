@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hast"
+    app:startDestination="@id/star">
+
+    <fragment
+        android:id="@+id/star"
+        android:name="com.muayid.my_kash.star"
+        android:label="fragment_star"
+        tools:layout="@layout/fragment_star" >
+        <action
+            android:id="@+id/action_star_to_test"
+            app:destination="@id/test" />
+        <action
+            android:id="@+id/action_star_to_ambulance"
+            app:destination="@id/ambulance" />
+        <action
+            android:id="@+id/action_star_to_map"
+            app:destination="@id/map" />
+    </fragment>
+    <fragment
+        android:id="@+id/map"
+        android:name="com.muayid.my_kash.map"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/test"
+        android:name="com.muayid.my_kash.test"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_test_to_star"
+            app:destination="@id/star" />
+    </fragment>
+    <fragment
+        android:id="@+id/ambulance"
+        android:name="com.muayid.my_kash.Ambulance"
+        android:label="fragment_ambulance"
+        tools:layout="@layout/fragment_ambulance" />
+</navigation>
